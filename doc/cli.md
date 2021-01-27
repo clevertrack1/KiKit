@@ -31,9 +31,17 @@ the following commands available:
 - `kikit panelize grid [options] <input> <output>` - create a panel of a given
   board with `rows` x `cols` boards separated by tabs (just like in the [README
   example](resources/promo.jpg)). The following options are accepted:
-  - `-s, --space FLOAT` Space between boards
+  - `-s, --space FLOAT` Space between boards. Note that if you prefer, you can
+    specify the verctical and horizontal spacing independently by the `--hspace`
+    and `--vspace` options.
   - `-g, --gridsize <INTEGER INTEGER>` Panel size `<rows> <cols>`
   - `-p, --panelsize <FLOAT FLOAT>` `<width> <height>` in millimeters
+  - `-a, --alternation <NAME>` allows you to specify board orientation
+    alternation. There are possible options:
+    - `none` - do not rotate the boards
+    - `rows` - rotate boards in even rows by 180°
+    - `cols` - rotate boards in even columns by 180°
+    - `rowsCols` - rotate boards on the black fields of a chessboard by by 180°
   - `--tabwidth FLOAT` Size of the bottom/up tabs, leave unset for full width
   - `--tabheight FLOAT` Size of the left/right tabs, leave unset for full height
   - `--htabs INT` Number of horizontal tabs per board
